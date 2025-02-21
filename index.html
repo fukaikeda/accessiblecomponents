@@ -1,0 +1,319 @@
+
+<head>
+    <title>Accessible Components</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container" id="content">
+        <div class="section">
+            <h2>Accessible Components</h2>
+            <p class="paragraph">This page is a case study of the  accessibility of <b>search boxes</b> 
+                across different applications, comparing their usability on computers and mobile devices. 
+                We then propose alternative designs for better accessiblity!</p>
+        </div>
+        <div class= "section">
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#slack">Component A: Slack</a></li> 
+                    <li><a href="#docs">Component B: Google Docs</a></li>
+                    <li><a href="#messages">Component C: Messages</a></li>
+                    <li><a href="#input">Comparison Table: Inputs</a></li>
+                    <li><a href="#output">Comparison Table: Outputs</a></li>
+                    <li><a href="#state">State Models</a></li>
+                    <li><a href="#statenew">State Models: Redesigned</a></li>
+                    <li><a href="#redesign">Redesigns</a></li>
+                    <li><a href="#reflections">Reflections</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <p class="highlight">Chosen Component: Search Box</p>
+            <p class="paragraph">The search box was chosen as it is an ubigious part of computer
+                and mobile applications. Consideration of the usability and accesibility of this component
+                has the potential to make applications better for a wide variety of people.<br>
+                <br>
+                <b>For each component, hover over/tab onto component to see it in action!</b>
+                </p>
+        </div>
+
+        <!--https://stackoverflow.com/questions/18813299/changing-image-on-hover-with-css-html used to
+        learn how to do image change on hover. ChatGPT used to learn how to change image on tab focus. -->
+
+
+        <div class="section">
+            <p class="highlight" id="slack">Component A: Slack</p>
+            <p class="paragraph">Slack is a software that is used commonly both on desktop and mobile. This 
+                was chosen to review a program where both desktop and mobile versions are used as equally as 
+                often.
+            </p>
+            <div class="image-container">
+                <p>On Computer</p>
+                <img src='images/stilla.png' 
+                onmouseout="this.src='images/stilla.png';" 
+                onmouseover="this.src='images/slack.gif';" 
+                onblur="this.src='images/stilla.png';"
+                onfocus="this.src='images/slack.gif';"
+                alt="Slack search on computer"
+                tabindex="0">
+                <p>On Mobile</p>
+                <img src='images/stillb.png' 
+                onmouseout="this.src='images/stillb.png';" 
+                onmouseover="this.src='images/slackmobile.gif';" 
+                onblur="this.src='images/stillb.png';"
+                onfocus="this.src='images/slackmobile.gif';"
+                alt="Slack search on mobile"
+                tabindex="0">
+                
+            </div>
+        </div>
+
+        <div class="section">
+            <p class="highlight" id="docs">Component B: Google Docs</p>
+            <p class="paragraph">Google Docs is a software that is mostly used on desktop, while it does have a 
+                mobile version as well. This was used to highlight an example in which the desktop app is more
+                popular.
+            </p>
+            <div class="image-container">
+                <p>On Computer</p>
+                <img src='images/stillc.png' 
+                onmouseout="this.src='images/stillc.png';" 
+                onmouseover="this.src='images/docs.gif';" 
+                onblur="this.src='images/stillc.png';"
+                onfocus="this.src='images/docs.gif';"
+                alt="Google Docs search on computer"
+                tabindex="0">
+                <p>On Mobile</p>
+                <img src='images/stilld.png' 
+                onmouseout="this.src='images/stilld.png';" 
+                onmouseover="this.src='images/docsmobile.gif';" 
+                onblur="this.src='images/stilld.png';"
+                onfocus="this.src='images/docsmobile.gif';"
+                alt="Google Docs search on mobile"
+                tabindex="0">
+            </div>
+        </div>
+
+        <div class="section">
+            <p class="highlight" id="messages">Component C: Messages</p>
+            <p class="paragraph">Messages is an app that most people used mainly on their phones. While there is a desktop
+                version of it, it is less commonly used, and this example is used to highlight those types of applications.
+            </p>
+            <div class="image-container">
+                <p>On Computer</p>
+                <img src='images/stille.png' 
+                onmouseout="this.src='images/stille.png';" 
+                onmouseover="this.src='images/messages.gif';" 
+                onblur="this.src='images/stille.png';"
+                onfocus="this.src='images/messages.gif';"
+                alt="Messages search on computer"
+                tabindex="0">
+                <p>On Mobile</p>
+                <img src='images/stillf.png' 
+                onmouseout="this.src='images/stillf.png';" 
+                onmouseover="this.src='images/messagesmobile.gif';" 
+                onblur="this.src='images/stillf.png';"
+                onfocus="this.src='images/messagesmobile.gif';"
+                alt="Messages search on mobile" 
+                tabindex="0">
+            </div>
+        </div>
+
+
+
+
+        <div class="section">
+            <p class="highlight" id="input">Reviewing Inputs</p>
+            <p class="paragraph">First, we review the <b>inputs</b> of each component. Inputs are ways
+            to interact with the object. In here, we consider the touchbad, keyboard input, and touch input.</p>
+                
+            <table>
+                <tr>
+                    <th></th>
+                    <th>A: Slack Search Box</th>
+                    <th>B: Docs Search Box</th>
+                    <th>C: Messages Search Box</th>
+                </tr>
+                <tr>
+                    <td><strong>Touchpad</strong></td>
+                    <td>- Shortcut pops up when hovered.<br>
+                        - Normal allowance<br>
+                        - No icon change on hover 
+                    </td>
+                    <td>- Icon changes when hovered.<br>
+                        - Normal allowance
+
+                    </td>
+                    <td>- Icon changes when hovered.<br>
+                        - Large allowance
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Keyboard</strong></td>
+                    <td>- Has a shortcut (Command + G) but not intuitive.<br>
+                        - Easy to input after command
+                    </td>
+                    <td>- Tab is used to move around screen<br>
+                        - A little confusing to see what is being selected<br>
+                        - Tab cannot move backward
+                    </td>
+                    <td>- Tab cannot be used, types a message instead<br>
+                        - No other keyboard inputs</td>
+                </tr>
+                <tr>
+                    <td><strong>Touch</strong></td>
+                    <td>- Small click allowance <br>
+                        - Responsive animation.</td>
+                    <td>- Hard to differentiate search input boundary.</td>
+                    <td>- Search box hidden; user must pull down to reveal it.</td>
+                </tr>
+            </table>
+        </div>
+       
+
+        <div class="section" id="output">
+            <p class="highlight">Reviewing Outputs</p>
+            <p class="paragraph">Next, we review the <b>outputs</b> of each component. Outputs
+            are changes in visual style such as colors, borders, or texts. It could also mean hidden
+            outputs such as alt text, which can be revealed with a screen reader.</p>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>A: Slack Search Box</th>
+                    <th>B: Docs Search Box</th>
+                    <th>C: Messages Search Box</th>
+                </tr>
+                <tr>
+                    <td><strong>On Click and Input</strong></td>
+                    <td>- Seaech navigation bar pops up <br>
+                        - Shows suggestions on keyboard input
+                    </td>
+                    <td>- Search box changes color (grey to white)<br>
+                        - Search box has boundary after click<br>
+                        - Shows suggestions as a pop up, box changes shape
+                    </td>
+                    <td>- Search box has blue border on click<br>
+                    - Shows suggestions without changes to search box</td>
+                </tr>
+                <tr>
+                    <td><strong>On Hover</strong></td>
+                    <td>- Shows key command on hover<br>
+                        - No other visual changes
+                    </td>
+                    <td>- Input bar shows on screen<br>
+                        - No other changes</td>
+                    <td>- Input bar shows on screen<br>
+                    - No other changes</td>
+                </tr>
+                <tr>
+                    <td><strong>On Touch</strong></td>
+                    <td>- Touch shows input bar<br>
+                        - No change in text<br>
+                        - Change in screen aligment</td>
+                    <td>- Touch changes entire view of box<br>
+                        - Text changes to show action allowed
+                    </td>
+                    <td>- Dragging automatically aligns user to text box<br>
+                        - Shows input bar, can understand what you are typing
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>With Screenreader</strong></td>
+                    <td>- Reads the entire menu instead of just the search box<br>
+                        - Difficult to tell what is being selected
+                    </td>
+                    <td>- Reads it as a menu box<br>
+                    - Difficult to tell what is being selected</td>
+                    <td>- Reads not only the name of component, but gives instruction on how to interact with it</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section" id="state">
+            <p class="highlight">State Models</p>
+            <p class="paragraph">Next, we review the <b>state models</b> of both mouse users and keyboard users.</p>
+            <div class="image-container">
+                <p><b>Mouse User</b></p>
+                <img src='images/mouse.png' 
+                alt="State diagram of mouse user on google docs">
+                <p><b>Keyboard User</b></p>
+                <img src='images/keyboard.png' 
+                alt="State diagram of keybaord user on google docs">
+            </div>
+        </div>
+        <div class="section" id="statenew">
+            <p class="highlight">State Models: Renewed</p>
+            <p class="paragraph">Next, we review the <b>state models</b> of </p>
+            <div class="image-container">
+                <p><b>Mouse User</b></p>
+                <img src='images/mousenew.png' 
+                alt="New state diagram of mouse user on google docs">
+                <p>I changed it so that a double click would clear the input. While
+                    this is a handy feature, the tradeoff is that is takes time to learn
+                    this feature. However, it provides more usability to people with
+                    lower motor control.
+                </p>
+                <p><b>Keyboard User</b></p>
+                <img src='images/keyboardnew.png' 
+                alt="New state diagram of keybaord user on google docs">
+                <p> I changed it so that the keyboard user can press escape to exit
+                    out of the selected componet. This is handy because there previously was
+                    no return sequence with keyboard. However, this use of escape is not
+                    traditional yet and users might mistakingly click it and have an unexpected result.
+                </p>
+            </div>
+        </div>
+
+        <div class="section" id="redesign">
+            <p class="highlight">Proposed Redesigns</p>
+            <p class="paragraph">Finally, we provide re-designs of two views of components. </p>
+            <div class="image-container">
+                <p><b>Initial State</b></p>
+                <img src='images/initial.png' 
+                alt="Redesign of initial state on Figma">
+                <p>Before my change, the intitial state had no info on what it would search for. However, other similar Google applications would specifiy the application
+                    (for example, Search for Mail). Therefore, I added text that would tell the user what the search is for. It also has the added benefit of
+                    adding info in the voiceover.
+                </p>
+                <p><b>Hover State</b></p>
+                <img src='images/hoverstate.png' 
+                alt="Redesign of hover state on Figma">
+                <p>In the original design, there was a search button when hovering that had no functionality when the 
+                    search box had no text. I proposed a redesign where that search button would not be shaded in thus showing
+                    it has no interaction. It also had a popup that would provide no context, so I added a pop-up that would
+                    tell the user how to inteact with the search bar. The removal of the clickable search button would also
+                    not confuse users using a screenreader with a empty button.
+                </p>
+            </div>
+        </div>
+
+        <div class="section" id="reflections">
+            <p class="highlight">Reflections</p>
+            <p class="paragraph">From this review, we can take away key points. <br>
+            <br>
+            <b>Overall Notes</b><br>
+            - Some components, such as Messages, was really good about providing enough context within the voice over to allow
+            a user to inteact with it with no visual component. I tried to replicate this in my design in a component which
+            did not have such a good voiceover context. <br>
+            <br>
+            - However, I failed to account how the added feature would interact with a keyboard-focused user. It takes away a button that
+            was meaningless in feature, but when the pop-up was added, there is difficulty in figuring out
+            where exactly the user would have to tab to to see the popup. <br>
+            <br>
+            - Kat Holmes, a designer, mentioned disabilities as 'mismatches' of a user's bodies and an environment. 
+            In my design, we strive to solve a mismatch between a user unable to navigate a search bar because of not
+            knowing what to search by having a popup that is screen-accessibile to describe how to use it. <br>
+            <br>
+            <b>Other Specific Notes</b><br>
+            - One example of how the tab input changes experiences negatively for users with imparements positively is that it makes
+            the process very slow. Shortcuts changes experiences positivety in the way that it is much quicker, but it should not be forgotten that there is a large learning curve to this. <br>
+            <br>
+            - In the context of accesibility features, I do think voice over features are prioritized. This is both a positive and negative thing
+            as since voice overs have so many plugs-in for users to use, the actual building of the website isn't considering this audience enough.
+            This includes including lots of images and leaving alt text tags, but forgetting that the alt text tags
+            are not enough for a visually impared user to fully understand what is happening. <br>
+        </div>
+
+</body>
